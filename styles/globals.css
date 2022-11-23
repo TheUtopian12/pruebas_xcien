@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-gallery {
+    width: 80%;
+    height: auto;
+}
+
+.swiper {
+    width: 1000px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+ 
+  
