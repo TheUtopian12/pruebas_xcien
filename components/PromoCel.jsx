@@ -4,7 +4,7 @@ const PromoCel = () => {
   return (
     <div className='h-[100vh] flex justify-center items-center'>
         <div >
-            Imagen promocional de App Xcine
+            Imagen promocional de App Xcien
         </div>
 
     </div>
