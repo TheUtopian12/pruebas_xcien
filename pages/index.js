@@ -1,5 +1,6 @@
 import Banners from "../components/Banners";
 import Landing from "../components/Landing";
+import NavBar from "../components/Navbar";
 import Nosotros from "../components/nosotros/Nosotros";
 import PromoCel from "../components/PromoCel";
 import Servicios from '../components/servicios/Servicios'
@@ -9,6 +10,7 @@ import Ventajas from "../components/Ventajas";
 export default function Home() {
   return (
     <>
+    <NavBar/>
     <Landing/>
     <Banners/>
     <Servicios/>

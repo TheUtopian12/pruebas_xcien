@@ -32,9 +32,6 @@ useEffect(() => {
           
         </div>
 
-        <div className="pt-10 pl-5"><p className="text-white group-hover:text-green-500">
-          <Link href={pagina}><p className="text-green-500" style={{cursor:'pointer'}}>Ver mas</p></Link>
-         </p></div>
         
       </div>
     </div>
