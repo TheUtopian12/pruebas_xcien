@@ -7,7 +7,7 @@ const Ventajas = () => {
     
     <div>
       <h1 className="sm:text-5xl text-2xl font-bold text-[#2adc2f] text-center">
-            Servicios
+            Ventajas
           </h1>
       
        <div>
