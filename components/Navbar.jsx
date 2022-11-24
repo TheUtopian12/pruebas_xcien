@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useTheme } from "next-themes";
 import styled from "styled-components";
@@ -10,7 +10,6 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 `;
 
 const Logo = styled.h1`
@@ -63,13 +62,13 @@ const Line = styled.span`
   transition: width 0.4s ease-in-out;
 
   :nth-child(2) {
-    width: ${props => (props.open ? "40%" : "70%")};
+    width: ${(props) => (props.open ? "40%" : "70%")};
   }
 `;
 
 const Overlay = styled.div`
   position: absolute;
-  height: ${props => (props.open ? "91vh" : 0)};
+  height: ${(props) => (props.open ? "91vh" : 0)};
   width: 100vw;
   background: #1c2022;
   transition: height 0.4s ease-in-out;
@@ -87,7 +86,7 @@ const OverlayMenu = styled.ul`
   transform: translate(-50%, -50%);
 
   li {
-    opacity: ${props => (props.open ? 1 : 0)};
+    opacity: ${(props) => (props.open ? 1 : 0)};
     font-size: 25px;
     margin: 50px 0px;
     transition: opacity 0.4s ease-in-out;
@@ -113,13 +112,19 @@ const NavBar = () => {
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
-        <button className="w-24 border-2 ml-10  border-white" onClick={() => setTheme("light")}>
+        <button
+          className="w-24 border-2 ml-10  border-white"
+          onClick={() => setTheme("light")}
+        >
           Light
         </button>
       );
     } else {
       return (
-        <button className="w-24 border-2 ml-10 border-white  text-white " onClick={() => setTheme("dark")}>
+        <button
+          className="w-24 border-2 ml-10 border-white  text-white "
+          onClick={() => setTheme("dark")}
+        >
           Dark
         </button>
       );
@@ -130,21 +135,14 @@ const NavBar = () => {
       <Nav className="fixed z-50 w-[100%] ">
         <Logo>XCIEN</Logo>
         <Menu>
-            
           <Item>
-            <Link  href="/#">
-              Inicio
-            </Link>
+            <Link href="/#">Inicio</Link>
           </Item>
           <Item>
-            <Link  href="#">
-              Servicios
-            </Link>
+            <Link href="#">Servicios</Link>
           </Item>
           <Item>
-            <Link  href="#">
-              Nosotros
-            </Link>
+            <Link href="#">Nosotros</Link>
           </Item>
           {renderThemeChanger()}
         </Menu>
@@ -157,19 +155,13 @@ const NavBar = () => {
       <Overlay open={toggle}>
         <OverlayMenu open={toggle}>
           <Item>
-            <Link  href="/#">
-              Inicio
-            </Link>
+            <Link href="/#">Inicio</Link>
           </Item>
           <Item>
-            <Link  href="#">
-              Servicios
-            </Link>
+            <Link href="#">Servicios</Link>
           </Item>
           <Item>
-            <Link  href="#">
-              Nosotros
-            </Link>
+            <Link href="#">Nosotros</Link>
           </Item>
         </OverlayMenu>
       </Overlay>
