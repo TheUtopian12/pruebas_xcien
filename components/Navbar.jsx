@@ -108,7 +108,6 @@ const NavBar = () => {
   }, []);
 
   const renderThemeChanger = () => {
-    if (!mounted) return null;
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
@@ -139,7 +138,7 @@ const NavBar = () => {
             <Link href="/#">Inicio</Link>
           </Item>
           <Item>
-            <Link href="#">Servicios</Link>
+            <Link href="/Servicios">Servicios</Link>
           </Item>
           <Item>
             <Link href="#">Nosotros</Link>

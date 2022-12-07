@@ -29,7 +29,8 @@ class Banners extends React.Component {
 
   render() {
     return (
-        <div className="flex justify-center dark:bg-black">
+        <div
+        className="flex justify-center dark:bg-black">
             <ImageGallery
             thumbnailPosition="bottom"
             showFullscreenButton={false}

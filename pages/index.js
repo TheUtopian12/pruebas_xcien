@@ -10,7 +10,6 @@ import Ventajas from "../components/Ventajas";
 export default function Home() {
   return (
     <>
-    <NavBar/>
     <Landing/>
     <Banners/>
     <Servicios/>
