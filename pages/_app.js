@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
        <NavBar/>
         <motion.div
           key={router}
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
           animate="animateState"
           exit="exitState"
           transition={{
-            duration: 0.75,
+            duration: 1.75,
           }}
           variants={{
             initialState: {

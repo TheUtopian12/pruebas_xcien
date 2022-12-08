@@ -6,7 +6,7 @@ import PromoCel from "../components/PromoCel";
 import Servicios from '../components/servicios/Servicios'
 import Slides from "../components/Slides";
 import Slides2 from "../components/Slides2";
-import Ventajas from "../components/Ventajas";
+import Ventajas from "../components/ventajas/Ventajas";
 export default function Home() {
   return (
     <>

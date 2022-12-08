@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Image from "next/image";
 import arrow from "./icons/Arrow.png";
 import internet from "./icons/internet.png";
@@ -8,15 +8,17 @@ import ciber from "./icons/padlock.png";
 import vpn from "./icons/VPN.png";
 import bigdata from "./icons/big-data.png";
 import Card from "./Card";
-
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 //Borroso fondo
 const Servicios = () => {
+  useEffect(() => {
+    Aos.init({duration:2000});
+  }, []);
   return (
-    <div className='bg-white dark:bg-black'>
-    
+    <div className="bg-white dark:bg-black">
       <div className="sm:h-full md:h-full lg:h-full xl:h-full pt-28 2xl:h-[130vh] ">
-        <div className="grid grid-cols-1 justify-center text-center">
+        <div className="grid grid-cols-1 justify-center text-center" data-aos="fade-up">
           {" "}
           <h1 className="sm:text-5xl text-2xl font-bold text-[#2adc2f]">
             Servicios
@@ -28,7 +30,9 @@ const Servicios = () => {
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-9 w-full mt-20 md:mb-10 xl:pl-10 xl:pr-10 transition ease-in-out ">
-          <div className={`flex justify-center 2xl:translate-x-38 3xl:translate-x-48`}>
+          <div data-aos='fade-right'
+            className={`flex justify-center 2xl:translate-x-38 3xl:translate-x-48`}
+          >
             <Card
               titulo={"Internet"}
               imagen={internet}
@@ -46,7 +50,7 @@ const Servicios = () => {
             />
           </div>
 
-          <div className="flex justify-center ">
+          <div data-aos='fade-up' className="flex justify-center ">
             <Card
               titulo={"SDWAN"}
               imagen={sdwan}
@@ -63,7 +67,7 @@ const Servicios = () => {
             />
           </div>
 
-          <div className="flex justify-center 2xl:-translate-x-38 3xl:-translate-x-48">
+          <div data-aos='fade-left' className="flex justify-center 2xl:-translate-x-38 3xl:-translate-x-48">
             <Card
               titulo={"Telefonía IP"}
               imagen={ip}
@@ -80,7 +84,7 @@ const Servicios = () => {
               pagina={""}
             />
           </div>
-          <div className="flex justify-center 2xl:translate-x-38 3xl:translate-x-48">
+          <div data-aos='fade-right' className="flex justify-center 2xl:translate-x-38 3xl:translate-x-48">
             <Card
               titulo={"CIBERSEGURIDAD"}
               imagen={ciber}
@@ -95,7 +99,7 @@ const Servicios = () => {
               pagina={""}
             />
           </div>
-          <div className="flex justify-center ">
+          <div data-aos='fade-up' className="flex justify-center ">
             <Card
               titulo={"VPN"}
               imagen={vpn}
@@ -113,7 +117,7 @@ const Servicios = () => {
               pagina={""}
             />
           </div>
-          <div className="flex justify-center 2xl:-translate-x-38 3xl:-translate-x-48">
+          <div data-aos='fade-left' className="flex justify-center 2xl:-translate-x-38 3xl:-translate-x-48">
             <Card
               titulo={"Data Center"}
               imagen={bigdata}
